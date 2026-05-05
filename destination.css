@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'Bellefair';
+  src: local('☺'),
+       url('https://fonts.gstatic.com/s/bellefair/v15/kJExBuYY6AAuhiXUxG1N.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 
 
 .navbar {
@@ -90,6 +112,11 @@ nav li a {
   display: inline-block;
 }
 
+nav li span{
+  color: white;
+  font-weight: 700;
+}
+
 
 .destination-page {
   background: url('destination/background-destination-desktop.jpg') no-repeat center/cover;
@@ -101,12 +128,22 @@ nav li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 120px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
 }
 
 
 .destination .left {
-  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination .left img {
+  width: 380px;   /* fixed size */
+  height: auto;
 }
 
 .destination .left h5 {
@@ -115,18 +152,16 @@ nav li a {
   margin-bottom: 60px;
 }
 
-.destination .left img {
-  width: 380px;
-}
+
 
 .destination .right {
-  width: 40%;
+  max-width: 450px;   /* 🔥 KEY FIX */
 }
 
 .tabs {
   display: flex;
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .tabs span {
@@ -135,25 +170,43 @@ nav li a {
   opacity: 0.6;
   cursor: pointer;
   position: relative;
+  transition: width 0.3s ease;
+
 }
 
-.tabs span.active {
-  opacity: 1;
+.tabs span {
+  position: relative;
+  cursor: pointer;
 }
 
-.tabs span.active::after {
+/* underline */
+.tabs span::after {
   content: "";
   position: absolute;
-  bottom: -10px;
   left: 0;
-  width: 100%;
+  bottom: -8px;
+
+  width: 0;
   height: 2px;
   background: white;
+
+  transition: width 0.3s ease;
 }
+
+/* hover effect */
+/* .tabs span:hover::after {
+  width: 100%;
+} */
+
+/* active state */
+.tabs span.active::after {
+  width: 100%;
+}
+
 
 
 .destination h1 {
-  font-family: 'Bellefair', serif;
+  font-family: 'Times New Roman';
   font-size: 90px;
   margin-bottom: 20px;
 }
@@ -162,10 +215,7 @@ nav li a {
 
 
 .desc {
-  font-family: 'Barlow', sans-serif;
-  line-height: 1.7;
-  opacity: 0.8;
-  margin-bottom: 40px;
+  min-height: 120px;  /* prevents jumping when content changes */
 }
 
 
@@ -178,9 +228,9 @@ nav li a {
 
 .stats {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 40px;
 }
-
 .stats p {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;

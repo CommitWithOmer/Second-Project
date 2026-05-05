@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destination</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="destination.css">
 </head>
 
@@ -31,21 +29,21 @@
   
   <div class="left">
     <h5><span>01</span> PICK YOUR DESTINATION</h5>
-    <img src="destination/image-mars.png" alt="Mars">
+    <img id="planet-img" src="destination/image-mars.png" alt="Mars">
   </div>
 
   <div class="right">
     
     <div class="tabs">
-      <span>MOON</span>
-      <span class="active">MARS</span>
-      <span>EUROPA</span>
-      <span>TITAN</span>
+        <span data-planet="moon">MOON</span>
+        <span data-planet="mars" class="active">MARS</span>
+        <span data-planet="europa">EUROPA</span>
+        <span data-planet="titan">TITAN</span>
     </div>
 
-    <h1>MARS</h1>
+    <h1 id="planet-name">MARS</h1>
 
-    <p class="desc">
+    <p  id="planet-desc" class="desc">
       Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
     </p>
 
@@ -54,18 +52,18 @@
     <div class="stats">
       <div>
         <p>AVG. DISTANCE</p>
-        <h4>225 MIL. KM</h4>
+        <h4 id="planet-distance">225 MIL. KM</h4>
       </div>
       <div>
         <p>EST. TRAVEL TIME</p>
-        <h4>9 MONTHS</h4>
+        <h4 id="planet-time">9 MONTHS</h4>
       </div>
     </div>
 
   </div>
 
 </section>
-
+<script src="destination.js"></script>
 </body>
     
 

@@ -17,7 +17,7 @@ const data = {
   europa: {
     name: "EUROPA",
     img: "destination/image-europa.png",
-    desc: "Europa, one of Jupiter’s largest moons, is covered in a thick layer of ice beneath which lies a vast ocean. Its smooth, bright surface is crisscrossed with dark streaks formed by cracks in the ice. Scientists believe this hidden ocean could potentially support life, making Europa one of the most intriguing destinations in our solar system."
+    desc: "Europa, one of Jupiter’s largest moons, is covered in a thick layer of ice beneath which lies a vast ocean. Its smooth, bright surface is crisscrossed with dark streaks formed by cracks in the ice. Scientists believe this hidden ocean could potentially support life"
   },
   titan: {
     name: "TITAN",

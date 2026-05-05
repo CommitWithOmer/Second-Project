@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: url('technology/background-technology-desktop.jpg') no-repeat center/cover;
+  color: white;
+  min-height: 100vh;
+}
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  margin-top: 30px;
+  margin-left: -30px;
+}
+
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 130px;
+  right: 60%;           
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.logo img {
+  width: 32px;
+  height: auto;
+  margin-right: 40px;
+  flex-shrink: 0;   
+}
+
+
+
+nav {
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 25px 140px 25px 100px;
+  background: rgba(20, 25, 40, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+
+nav li {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+nav li {
+  position: relative;
+}
+
+
+nav li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+
+nav li:hover::after,
+nav li.active::after {
+  width: 100%;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+nav li span{
+  color: white;
+  font-weight: 700;
+}
+
+.technology {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+/* LEFT */
+.technology .left {
+  width: 50%;
+}
+
+.technology h5 {
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  font-family: 'Barlow Condensed';
+}
+
+/* CONTENT LAYOUT */
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps span {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Bellefair';
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.steps span.active {
+  background: white;
+  color: black;
+}
+
+.steps span:hover {
+  border-color: white;
+}
+
+/* TEXT */
+.info {
+  max-width: 400px;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+#tech-title {
+  font-family: 'Bellefair';
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#tech-desc {
+  line-height: 1.7;
+  opacity: 0.8;
+  min-height: 120px;
+}
+
+/* RIGHT IMAGE */
+.technology .right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#tech-img {
+  width: 100%;
+  max-width: 450px;
+}

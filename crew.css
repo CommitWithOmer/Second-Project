@@ -1,14 +1,23 @@
+h1 {
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Bellefair', serif;
 }
 
 body {
   background: url('crew/background-crew-desktop.jpg') no-repeat center/cover;
   color: white;
   min-height: 100vh;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 
@@ -109,7 +118,7 @@ nav li span{
 
 .crew {
   position: relative;
-  height: 100vh;   /* full screen like design */
+  height: 100vh; 
   display: flex;
   align-items: center;
   padding: 80px 40px;
@@ -128,35 +137,65 @@ nav li span{
   width: 45%;
   z-index: 2;
 }
+ 
+.crew .left {
+  position: relative;
+  width: 45%;
+}
 
-/* Prevent jumping */
+.crew .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px; 
+  margin-left: 55px;
+  margin-top: -40px;
+}
+
+
+
 #bio {
   min-height: 120px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+
+#bio {
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.7;
+  opacity: 0.8;
 }
 
 .crew h5 {
+  font-family: 'Barlow Condensed', sans-serif;
   margin-bottom: 60px;
-  letter-spacing: 3px;
-  font-family: 'Barlow Condensed';
+  letter-spacing: 4px;
 }
 
+
+
+
+
 #role {
-  font-family: 'Bellefair';
+  font-family: 'Bellefair', serif;
   font-size: 24px;
   opacity: 0.5;
   margin-bottom: 10px;
 }
 
 #name {
-  font-family: 'Bellefair';
-  font-size: 50px;
+  /* font-size: 50px; */
   margin-bottom: 20px;
+}
+#name{
+font-family: 'Bellefair', serif;
+  font-size: 80px;
+  letter-spacing: 2px;
 }
 
 
 
-/* RIGHT IMAGE */
+
 .crew .right {
   width: 45%;
   display: flex;
@@ -170,14 +209,22 @@ nav li span{
 
 #crew-img {
   height: 85vh; 
-  max-height: 650px;   /* control size */
+  max-height: 650px;   
   object-fit: contain;
   display: block;
 }
 
-/* DOTS */
+
 .dots {
   margin-top: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 30px;   
+  left: 0px;
   display: flex;
   gap: 15px;
 }

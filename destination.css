@@ -17,6 +17,7 @@ h1 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .menu-open,
@@ -41,7 +42,7 @@ h1 {
   position: absolute;
   top: 50%;
   left: 130px;
-  right: 60%;           
+  right: 58%;           
   height: 1px;
   background: rgba(255,255,255,0.4);
   transform: translateY(-50%);
@@ -125,6 +126,7 @@ nav li span{
 .destination-page {
   background: url('destination/background-destination-desktop.jpg') no-repeat center/cover;
   color: white;
+  min-height: 100vh;
 }
 
 
@@ -281,7 +283,7 @@ nav li span{
   line-height: 1;
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
 
   body {
     background: url('home/background-home-mobile.jpg') no-repeat center/cover;
@@ -489,16 +491,15 @@ nav li span{
   }
 
   .left h5 {
-    font-size: 2px;
-    letter-spacing: 2px;
-    width: 315px;
+    font-size: 1px;
+    letter-spacing: 1px;
+    width: 335px;
+    margin-left: -5px;
   }
 
   .destination .left h5 span {
    opacity: 0.25;
    font-weight: 700;
-   margin-right: 5px;
-   margin-left: 0px;
  }
 
   #planet-img {

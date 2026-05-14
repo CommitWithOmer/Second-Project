@@ -568,6 +568,129 @@ nav li span{
 
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+  body {
+    background: url('crew/background-crew-tablet.jpg')
+    no-repeat center/cover;
+
+    min-height: 100vh;
+  }
+
+  .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+ .navbar::before {
+  display: none;
+}
+ .logo img {
+  width: 40px;
+  margin-top: 5px;
+}
+ nav ul {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 25px 40px;
+  background: rgba(20, 25, 40, 0.45);
+  backdrop-filter: blur(12px);
+
+  list-style: none;
+}
+ nav li {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+ .menu-open,
+ .mobile-nav {
+  display: none;
+}
+ nav li::after {
+  bottom: -25px;
+}
+
+
+.crew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 0;
+}
+
+.mobile-crew {
+  display: none;
+}
+
+.crew .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crew h5 {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+
+#role {
+  font-size: 24px;
+  opacity: 0.5;
+  margin-bottom: 0;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+
+#name {
+  font-size: 56px;
+  line-height: 0.85;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+#bio {
+  width: 460px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: -10px;
+}
+
+.desktop-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  margin-top: -10px;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#crew-img {
+  position: relative;
+  left: -150px;
+  top: -150px;
+  width: 420px;
+  height: auto;
+  margin:0 auto;
+  display: block;
+}
+}
+
 
 
 

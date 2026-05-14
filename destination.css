@@ -546,3 +546,142 @@ nav li span{
 
 
 }
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+  body {
+    background: url('destination/background-destination-tablet.jpg')
+    no-repeat center/cover;
+    min-height: 100vh;
+  }
+
+  .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+ .navbar::before {
+  display: none;
+}
+ .logo img {
+  width: 40px;
+  margin-top: 5px;
+}
+ nav ul {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 25px 40px;
+  background: rgba(20, 25, 40, 0.45);
+  backdrop-filter: blur(12px);
+
+  list-style: none;
+}
+ nav li {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+ .menu-open,
+ .mobile-nav {
+  display: none;
+}
+ nav li::after {
+  bottom: -25px;
+}
+
+.destination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px 60px;
+}
+
+.destination .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.destination h5 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  margin-left: 0;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transform: scale(0.9);
+  transform-origin: left;
+}
+
+.destination .left h5 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  transform: scale(0.9);
+  transform-origin: left;
+  padding-left: 0;
+  margin-left: -15px;
+}
+
+picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#planet-img {
+  display: block;
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.destination .right {
+  width: 100%;
+  position: relative;
+  left: -15px;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+#planet-name {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  width: 520px;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 80px;
+}
+
+}

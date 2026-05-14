@@ -186,16 +186,12 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.1);
-
   transform: translate(-50%, -50%) scale(1);
   transition: 0.4s ease;
-
   z-index: -1;
 }
 
@@ -231,9 +227,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     padding: 40px 25px;
     gap: 90px;
     position: relative;
@@ -256,7 +250,6 @@ h1 {
 
   .description {
     width: 100%;
-
     font-size: 15px;
     line-height: 1.8;
   }
@@ -287,7 +280,6 @@ h1 {
   .menu-open {
     width: 24px;
     cursor: pointer;
-
     position: absolute;
     right: 25px;
     top: 30px;
@@ -298,17 +290,12 @@ h1 {
     position: fixed;
     top: 0;
     right: -100%;
-
     width: 75%;
     height: 100vh;
-
     background: rgba(11, 13, 23, 0.95);
     backdrop-filter: blur(20px);
-
     padding: 120px 30px;
-
     transition: 0.4s ease;
-
     z-index: 999;
   }
 
@@ -328,18 +315,13 @@ h1 {
  .mobile-nav li::after {
   content: "";
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   width: 100%;
   height: 2px;
-
   background: white;
-
   transform: scaleX(0);
   transform-origin: left;
-
   transition: 0.3s ease;
 }
 
@@ -348,11 +330,9 @@ h1 {
 }
   .menu-close {
     width: 22px;
-
     position: absolute;
     top: 30px;
     right: 25px;
-
     cursor: pointer;
   }
 
@@ -416,3 +396,141 @@ h1 {
 }
   
 } 
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+  body {
+    background: url('home/background-home-tablet.jpg')
+    no-repeat center/cover;
+
+    min-height: 100vh;
+  }
+
+  .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+ .navbar::before {
+  display: none;
+}
+ .logo img {
+  width: 40px;
+  margin-top: 5px;
+}
+ nav ul {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 25px 40px;
+  background: rgba(20, 25, 40, 0.45);
+  backdrop-filter: blur(12px);
+
+  list-style: none;
+}
+ nav li {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+ .menu-open,
+ .mobile-nav {
+  display: none;
+}
+ nav li::after {
+  bottom: -25px;
+}
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px 80px;
+  }
+
+  .hero .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+  }
+
+  .subtitle {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 200px;
+}
+
+  .hero h1 {
+    font-size: 150px;
+    line-height: 1;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    width: 450px;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .right {
+    position: static;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .explore-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 240px;
+    font-size: 28px;
+    margin: 0 auto;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: 80px;
+    transform: none;
+    z-index: 1;
+    transition: 0.2s ease;
+
+  }
+
+  .explore-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.explore-btn:active {
+  box-shadow: 0 0 0 60px rgba(255,255,255,0.15);
+}
+
+
+
+
+}
